@@ -1,0 +1,14 @@
+.btn-box  {
+    width: 100%;
+}
+
+.btn-box button {
+    margin-top: 15px;
+    padding: 6px 52px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 100%;
+}

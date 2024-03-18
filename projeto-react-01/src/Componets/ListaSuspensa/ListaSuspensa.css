@@ -1,0 +1,16 @@
+.sd {
+    padding: 6px 0;
+}
+
+select {
+    outline: none;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 12px;
+    text-align: left;
+    padding-right: 5px;
+    margin: 10px 0;
+    width: 100%;
+    cursor: pointer;
+    
+}
