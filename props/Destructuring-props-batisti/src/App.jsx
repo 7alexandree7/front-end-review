@@ -10,7 +10,9 @@ function App() {
 
   return (
     <>
-    <CarDetails  brand= 'BMW' km={12000} color='black'/>
+    <CarDetails  brand= 'BMW' km={12000} color='black' newCar={true}/>
+    <CarDetails  brand= 'Mercedes' km={8000} color='white' newCar={true}/>
+    <CarDetails  brand= 'Audi' km={6200} color='red' newCar={false}/>
     </>
   )
 }
