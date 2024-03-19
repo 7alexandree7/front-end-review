@@ -1,7 +1,5 @@
 const ListaSuspensa = ({ titulo, listaDeDesenhos }) => {
 
-
-    
     return (
 
         <div>
