@@ -1,0 +1,11 @@
+.box-saudacao {
+    width: 600px;
+    padding: 1rem;
+    background-color: rgba(180, 185, 183, 0.938);
+    margin-top: 2rem;
+}
+
+
+.p-saudacao {
+    color: #000;
+}
