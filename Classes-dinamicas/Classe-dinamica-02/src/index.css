@@ -30,6 +30,31 @@ body {
   min-height: 100vh;
 }
 
+
+.first {
+  background-color: rgb(110, 81, 42);
+  color: #c01616;
+}
+
+
+.second {
+  color: rgb(15, 221, 15);
+  background-color: #000000;
+}
+
+
+
+.firstt {
+  background-color: rgba(21, 129, 70, 0.548);
+  color: #1a1a1a;
+}
+
+
+.secondd {
+  background-color: #914294;
+  color: #fff;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

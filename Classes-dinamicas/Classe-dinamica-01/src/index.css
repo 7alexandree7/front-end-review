@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #494949;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -53,6 +53,37 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+
+
+
+.red-title {
+  color: #e03030;
+  background-color: #000;
+  padding: 2rem;
+}
+
+
+.title  {
+  color: #000;
+  background-color: gold;
+  padding: 2rem;
+}
+
+
+.txt-true {
+  color: #646cff;
+  background-color: aquamarine;
+  padding: 2rem;
+}
+
+
+.txt-false {
+  color: chocolate;
+  background-color: darkviolet;
+  padding: 2rem;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
