@@ -1,0 +1,16 @@
+form {
+    width: 600px;
+}
+
+
+input  {
+    display: block;
+    margin: 0 auto;
+    padding: 4px;
+}
+
+.dd {
+    margin-top: 10px;
+    padding: 4px 10px;
+}
+
