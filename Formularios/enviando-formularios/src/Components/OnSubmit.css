@@ -1,0 +1,11 @@
+input,
+label,
+span {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+}
