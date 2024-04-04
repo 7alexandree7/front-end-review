@@ -27,11 +27,9 @@ function App() {
   const pickedWordAndCategory = () => {
     const categories = Object.keys(words);
     const category = categories[Math.floor(Math.random() * Object.keys(categories).length)];
-    console.log(category);
 
     const word = words[category][Math.floor(Math.random() * words[category].length)];
-    console.log(word);
-
+ 
     return {word, category}
     
   };
@@ -65,6 +63,7 @@ function App() {
 
 
   return (
+    
     <div className='App'>
       {gameStage == 'start' && <StartScreen StartGame={StartGame} /> }
       {gameStage == 'game' && <Game  verifyLetter={verifyLetter}/>}
