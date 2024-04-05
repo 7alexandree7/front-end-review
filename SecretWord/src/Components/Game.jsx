@@ -1,17 +1,26 @@
 import "./Game.css"
 
-const Game = ({verifyLetter}) => {
+const Game = ({
+    verifyLetters,
+    pickedWord,
+    pickedCategory,
+    letters,
+    guessedLetters,
+    wordLetters,
+    guesses,
+    score,
+}) => {
 
     return (
 
         <div className="game">
             <p className="points">
-                <span>Pontuação: 000</span>
+                <span>Pontuação: {score}</span>
             </p>
 
             <h1>Adivinhe a palavra</h1>
-            <h3 className="tip">Dica sobre a palavra <span>Dica...</span></h3>
-            <p>Voce ainda tem xxx tentativas</p>
+            <h3 className="tip">Dica sobre a palavra <span>{pickedCategory}</span></h3>
+            <p>Voce ainda tem {guesses} tentativas</p>
 
             <div className="wordContainer">
                 <span className="letter">A</span>
