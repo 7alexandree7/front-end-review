@@ -1,0 +1,46 @@
+{
+    "products": [
+
+        {
+            "id": 1,
+            "name": "mouse",
+            "cor": "branco",
+            "price": 100,
+            "marca": "Logitech"
+        },
+
+        {
+            "id": 2,
+            "name": "teclado",
+            "cor": "preto",
+            "price": 450,
+            "marca": "hyperxy"
+        },
+
+
+        {
+            "id": 3,
+            "name": "headset",
+            "cor": "amarelo",
+            "price": 800,
+            "marca": "Logitech"
+        },
+
+
+        {
+            "id": 4,
+            "name": "monitor",
+            "cor": "cinza",
+            "price": 2000,
+            "marca": "asus"
+        },
+
+        {
+            "id": 5,
+            "name": "CPU",
+            "cor": "azul",
+            "price": 500,
+            "marca": "Aerocool"
+        }
+    ]
+}

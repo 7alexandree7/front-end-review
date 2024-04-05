@@ -33,7 +33,7 @@ function App() {
       <ul>
         {products.map((product) => {
           return (
-            <li key={product.id}>{product.name} - {product.price}</li>
+            <li key={product.id}>{product.name}</li>
           )
         })}
       </ul>
