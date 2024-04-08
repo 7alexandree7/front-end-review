@@ -1,24 +1,34 @@
 {
-    "poducts": [
-        {
-            "id": 1,
-            "name": "Camisa",
-            "price": 59.9
-        },
-
-        {
-            "id": 2,
-            "name": "Calça-vermelha",
-            "price": 90
-        },
-
-
-        {
-            "id": 3,
-            "name": "Bone aba reta",
-            "price": 29.9
-        }
-
-        
-    ]
+  "poducts": [
+    {
+      "id": "1",
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": "2",
+      "name": "Calça-vermelha",
+      "price": 90
+    },
+    {
+      "id": "3",
+      "name": "Bone aba reta",
+      "price": 29.9
+    },
+    {
+      "id": "3689",
+      "name": "xande",
+      "price": "21"
+    },
+    {
+      "id": "94f3",
+      "name": "alexandre",
+      "price": "9"
+    },
+    {
+      "id": "0c10",
+      "name": "tramontina",
+      "price": "222"
+    }
+  ]
 }
