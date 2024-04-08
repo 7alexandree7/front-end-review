@@ -1,0 +1,32 @@
+ {
+    "pdroducts": [
+
+        {
+            "id": 1,
+            "name": "alexandre",
+            "cargo": "Dev Front-end",
+            "idade": 21
+        },
+
+        {
+            "id": 2,
+            "name": "samuel",
+            "cargo": "Dev back-end",
+            "idade": 28
+        },
+
+        {
+            "id": 3,
+            "name": "Peterson",
+            "cargo": "Devops",
+            "idade": 45
+        },
+
+        {
+            "id": 4,
+            "name": "vitor",
+            "cargo": "full-stack",
+            "idade": 76
+        }
+    ]
+ }
