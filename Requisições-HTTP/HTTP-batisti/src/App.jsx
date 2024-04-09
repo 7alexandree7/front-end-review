@@ -8,7 +8,7 @@ const url = 'http://localhost:3000/poducts';
 
 function App() {
 
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
   const [products, setProducts] = useState([]);
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
@@ -19,7 +19,7 @@ function App() {
     async function fetchData() {
       const res = await fetch(url);
       const data = await res.json();
-      setProducts(data)
+      setProducts(data);
     }
 
     fetchData()
@@ -44,7 +44,15 @@ function App() {
       body: JSON.stringify(product)
     })
 
-    console.log(product)
+    console.log(product);
+
+
+    // Carregamento dinamico
+    const addProductDinamic = await res.json();
+    setProducts((prevProducts) => [...prevProducts, addProductDinamic]);
+
+    setName('');
+    setPrice('');
   }
 
 
