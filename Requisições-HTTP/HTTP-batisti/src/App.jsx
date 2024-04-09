@@ -3,6 +3,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+//custom hook
+import { useFetch } from './hooks/useFetch'
+
 // URL do localHost
 const url = 'http://localhost:3000/poducts';
 
@@ -12,19 +15,21 @@ function App() {
   const [products, setProducts] = useState([]);
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
+  const {data: items}= useFetch(url)
 
   // resgatando dados
-  useEffect(() => {
+ // useEffect(() => {
 
-    async function fetchData() {
-      const res = await fetch(url);
-      const data = await res.json();
-      setProducts(data);
-    }
+   // async function fetchData() {
+     // const res = await fetch(url);
+     // const data = await res.json();
+     // setProducts(data);
+   // }
 
-    fetchData()
+    //fetchData()
 
-  }, []);
+  //}, []);
+
 
 
   const handleSubmit = async (e) => {
@@ -62,7 +67,7 @@ function App() {
       <h1>Lista de Produtos com json server</h1>
 
 
-      {products.map((product) => {
+      {items && items.map((product) => {
         return (
           <ul>
             <li key={product.id}>{product.name} - {product.price}</li>
