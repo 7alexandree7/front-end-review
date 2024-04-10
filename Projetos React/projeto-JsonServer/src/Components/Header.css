@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.banner  {
+    height: 400px;
+    width: 800px;
+    background-image: url('./img/eb6680c1b50f9e8d45310edc01c163a5.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 12px;
+    margin-top: 2rem;
+
+}
+
+
+
+.header-box h1 {
+    font-size: 42px;
+    margin-bottom: 0.8rem;
+}
+
+
+
+
+

@@ -4,4 +4,25 @@
   box-sizing: border-box;
   background-color: #242424;
   color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+input, button {
+  border: none;
+  outline: none;
+  padding: 2px;
+  border-radius: 10px;
+  
+} 
+
+
+
+
+.header-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

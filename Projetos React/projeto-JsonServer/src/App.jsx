@@ -4,16 +4,25 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 //Import Components
-import Header from './Components/Header'
+import Header from './Components/Header';
+import Form from './Components/Form';
 
 function App() {
-  const [count, setCount] = useState(0);
+
+  const [name, setNmae] = useState('');
+  const [sobreNome, setSobrenome] = useState('');
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
 
 
   return (
-    <>
+    <div className='App'>
       <Header />
-    </>  
+      <Form  name={name} sobreNome={sobreNome} setName={setNmae} setSobrenome={setSobrenome}/>
+    </div>
   )
   
 }
