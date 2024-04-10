@@ -8,7 +8,7 @@ const Form = ({name, setName, sobreNome, setSobrenome, handleSubmit}) => {
 
 
             <div className='flex-form'>
-                
+
                 <label>
                     <span>Nome:</span>
                     <input type="text" name="nome" id="nome" required value={name} onChange={(e) => setName(e.target.value)} />        
@@ -29,8 +29,6 @@ const Form = ({name, setName, sobreNome, setSobrenome, handleSubmit}) => {
         </form>
     )
 }
-
-
 
 
 export default Form;
