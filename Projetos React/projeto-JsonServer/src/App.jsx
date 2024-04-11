@@ -6,12 +6,15 @@ import Form from './Components/Form';
 
 function App() {
 
-  const [name, setNmae] = useState('');
+  const [name, setName] = useState('');
   const [sobreNome, setSobrenome] = useState('');
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log('Evento previnido');
+    setName('');
+    setSobrenome('');
   }
 
 
@@ -20,8 +23,9 @@ function App() {
       <Form
         name={name}
         sobreNome={sobreNome}
-        setName={setNmae}
+        setName={setName}
         setSobrenome={setSobrenome}
+        handleSubmit={handleSubmit}
       />
     </div>
   )
