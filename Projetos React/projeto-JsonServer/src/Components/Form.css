@@ -38,27 +38,3 @@ input {
     font-weight: 600;
 }
 
-.btn-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-
-}
-
-
-button {
-    margin: 25px 0;
-    background-color: rgba(240, 240, 240, 0.877);
-    width: 60%;
-    color: #000000;
-    border: 1px solid #000;
-    font-weight: 600;
-    cursor: pointer;
-    text-align: center;
-}
-
-
-
-

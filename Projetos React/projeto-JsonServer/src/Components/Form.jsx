@@ -1,4 +1,5 @@
 import './Form.css'
+import Button from './Button';
 
 const Form = ({name, setName, sobreNome, setSobrenome, handleSubmit}) => {
 
@@ -22,9 +23,7 @@ const Form = ({name, setName, sobreNome, setSobrenome, handleSubmit}) => {
                     <input type="text" name="sobreNome" id="sobreNome" required value={sobreNome} onChange={(e) => setSobrenome(e.target.value)} />
                 </label>
 
-                <div className='btn-box'>
-                    <button className='btn'>Enviar</button>
-                </div>
+                <Button />
 
             </div>
 
