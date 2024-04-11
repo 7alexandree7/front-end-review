@@ -12,6 +12,12 @@ form {
     flex-direction: column;
     padding: 20px;
     border-bottom: 1px solid #ffffff52;
+    margin-bottom: 5rem;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
 }
 
 
