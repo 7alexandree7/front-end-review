@@ -4,7 +4,6 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 //Import Components
-import Header from './Components/Header';
 import Form from './Components/Form';
 
 function App() {
@@ -20,11 +19,15 @@ function App() {
 
   return (
     <div className='App'>
-      <Header />
-      <Form  name={name} sobreNome={sobreNome} setName={setNmae} setSobrenome={setSobrenome}/>
+      <Form
+        name={name}
+        sobreNome={sobreNome}
+        setName={setNmae}
+        setSobrenome={setSobrenome}
+      />
     </div>
   )
-  
+
 }
 
 export default App;

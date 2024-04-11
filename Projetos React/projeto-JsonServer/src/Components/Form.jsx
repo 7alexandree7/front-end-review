@@ -6,7 +6,7 @@ const Form = ({name, setName, sobreNome, setSobrenome, handleSubmit}) => {
 
         <form onSubmit={handleSubmit}>
 
-            <h1>Adicionar novos Elementos ao Json server</h1>
+            <h1 className='title'>Adicionar novos Elementos ao Json server</h1>
 
 
             <div className='flex-form'>
@@ -23,7 +23,7 @@ const Form = ({name, setName, sobreNome, setSobrenome, handleSubmit}) => {
                 </label>
 
                 <div className='btn-box'>
-                    <button>Enviar</button>
+                    <button className='btn'>Enviar</button>
                 </div>
 
             </div>

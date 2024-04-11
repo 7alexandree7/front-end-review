@@ -16,14 +16,3 @@ input, button {
   padding: 6px;
   
 } 
-
-
-
-
-.header-box {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
