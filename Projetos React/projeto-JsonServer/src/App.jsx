@@ -3,6 +3,7 @@ import './App.css'
 
 //Import Components
 import Form from './Components/Form';
+import List from './Components/List';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         setSobrenome={setSobrenome}
         handleSubmit={handleSubmit}
       />
+      <List/>
     </div>
   )
 
