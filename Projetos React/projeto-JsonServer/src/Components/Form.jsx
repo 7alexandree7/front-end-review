@@ -1,7 +1,23 @@
 import './Form.css'
 import Button from './Button';
+import ListaSuspensa from './ListaSuspensa';
 
-const Form = ({name, setName, sobreNome, setSobrenome, handleSubmit}) => {
+
+const ListaDeAnimes = [
+    'Naruto Shipuden',
+    'Swoprd Art Online',
+    'Solo Leveling',
+    'Globin slayer',
+    'no game no life',
+    'Attack on Titan',
+    'One Pierce',
+    'Boku no Hero',
+    'Sword Art Online',
+    'Boruto',
+  ]
+
+
+const Form = ({ name, setName, sobreNome, setSobrenome, handleSubmit }) => {
 
     return (
 
@@ -23,7 +39,11 @@ const Form = ({name, setName, sobreNome, setSobrenome, handleSubmit}) => {
                     <input type="text" name="sobreNome" id="sobreNome" required value={sobreNome} onChange={(e) => setSobrenome(e.target.value)} />
                 </label>
 
+
+                <ListaSuspensa ListaDeAnimes={ListaDeAnimes} />
                 <Button />
+
+
 
             </div>
 
