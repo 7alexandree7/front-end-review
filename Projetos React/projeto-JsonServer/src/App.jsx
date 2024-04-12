@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 //Import Components
@@ -6,17 +6,40 @@ import Form from './Components/Form';
 import List from './Components/List';
 
 function App() {
-
-
   const [name, setName] = useState('');
   const [sobreNome, setSobrenome] = useState('');
+  const [products, setProducts] = useState([]);
+  const [submited, setSubmited] = useState(false);
 
+  const url = 'http://localhost:3000/products';
 
-  const handleSubmit = (e) => {
+  useEffect(() => {
+    fechData();
+  }, [submited])
+
+  async function fechData() {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
+    setProducts(data);
+  }
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Evento previnido');
-    setName('');
-    setSobrenome('');
+
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        nome: name,
+        sobreNome,
+      })
+    })
+
+    setSubmited(true);
   }
 
 
@@ -29,7 +52,7 @@ function App() {
         setSobrenome={setSobrenome}
         handleSubmit={handleSubmit}
       />
-      <List/>
+      <List products={products} />
     </div>
   )
 

@@ -1,31 +1,16 @@
 import { useState, useEffect } from 'react';
 import './List.css'
 
-const url = 'http://localhost:3000/products';
-
-const List = ({}) => {
-    const [products, setProducts] = useState([])
-
-
-    useEffect(() => {
-        async function fechData ()  {
-            const response = await fetch(url);
-            const data = await response.json();
-            setProducts(data);
-        }
-
-        fechData();
-    }, [])
-
+const List = ({ products }) => {
      return (
         <div className='list'>
             <h2>Minha Lista do Banco de Dados</h2>
 
             {products.map((product) => {
                 return (
-                    <ul>
-                        <li key={product.id}>{product.nome}</li>
-                        <li key={product.id}>{product.sobreNome}</li>
+                    <ul key={product.id}>
+                        <li>{product.nome}</li>
+                        <li>{product.sobreNome}</li>
                     </ul>
                 )
             })}

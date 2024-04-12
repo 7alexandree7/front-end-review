@@ -4,7 +4,7 @@ const Button = () => {
 
     return (
         <div className="btn-box">
-            <button className="btn">Enviar</button>
+            <button className="btn" type="submit">Enviar</button>
         </div>
 
     )
