@@ -64,6 +64,32 @@ const chanelListData = [
 
 ]
 
+const socialListData = [
+  {
+    url:'https://www.instagram.com/maykbrito',
+    imageUrl: '/assets/instagram.svg',
+    alt: 'Intagram do mayke brito'
+  },
+
+  {
+    url:'https://www.twitter.com/maykbrito',
+    imageUrl: '/assets/twitter.svg',
+    alt: 'twitter do myke brito'
+  },
+
+  {
+    url:'https://www.youtube.com/maykbrito',
+    imageUrl: '/assets/youtube.svg',
+    alt: 'youtube do mayke brito'
+  },
+
+  {
+    url:'https://www.twitch.tv/maykbrito',
+    imageUrl: '/assets/twitch.svg',
+    alt: 'twitch do mayke brito'
+  }
+]
+
 
 
 
@@ -118,6 +144,16 @@ function App() {
         title='Minhas Redes'
         subTitle='Se conecte comigo agora messmo'
         >
+
+          {socialListData.map(function (item) {
+            return (
+              <ListItems
+                url={item.url}
+                imageUrl={item.imageUrl}
+                alt={item.alt}
+              />
+            )
+          })}
         </Section>
 
       </main>
