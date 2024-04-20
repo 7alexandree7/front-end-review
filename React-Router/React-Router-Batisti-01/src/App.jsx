@@ -12,6 +12,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 
+
+// import Components
+import NavBar from './Components/NavBar';
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -21,6 +25,8 @@ function App() {
       <h2>React Router</h2>
 
       <BrowserRouter>
+        <NavBar />
+
         <Routes>
 
           <Route path='/' element={<Home />} />
