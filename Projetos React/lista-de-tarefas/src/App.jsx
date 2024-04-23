@@ -53,6 +53,16 @@ function App() {
 
     setTodos(newTodo)
   }
+
+
+  const removeTodo = (id) => {
+
+    const newTodos = [...todos]
+    const filteredTodos = newTodos.filter(todo => todo.id !== id ? todo : null );
+    setTodos(filteredTodos);
+    console.log(filteredTodos);
+
+  }
   
 
 
@@ -67,6 +77,7 @@ function App() {
             <Todo
               todo={todo}
               key={todo.id}
+              removeTodo={removeTodo}
             />
           )
         })}
