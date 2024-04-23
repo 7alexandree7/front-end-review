@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-const TodoForm = ({}) => {
+const TodoForm = ({addTodo}) => {
 
     const [value, setValue] = useState("");
-    const [category, setCategory] = useState("")
+    const [category, setCategory] = useState("");
 
 
     const handleSubmit = (e) => {
@@ -11,7 +11,9 @@ const TodoForm = ({}) => {
         console.log("Evento previnido, form enviado!")
         console.log(value, category)
 
-        if(!value || category) return;
+        if(!value || !category) return;
+
+        addTodo(value, category)
 
         setValue("");
         setCategory("");
