@@ -1,42 +1,92 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  padding: 50px;
+  color: #333;
+  background-image: url('./img/Lineargradient2-660x322.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.app {
+  max-width: 800px;
+  margin:  0 auto;
+  background-color: #efefef;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+
+.todo-list {
+  margin-bottom: 2.5rem;
+}
+
+
+h1 {
   text-align: center;
+  margin-bottom: 3rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+h2 {
+  margin-bottom: 10px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+p {
+  margin: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+input, select {
+  padding: 9px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 1px solid #DDD;
+  width: 100%;
+  outline: none;
 }
 
-.card {
-  padding: 2em;
+
+input {
+  box-sizing: border-box;
 }
 
-.read-the-docs {
-  color: #888;
+
+button {
+  margin-right: 10px;
+  padding: 12px;
+  background-color: #141414e7;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: .8;
+  transform: .3s;
+}
+
+
+.remove {
+  background-color: #d95353;
+}
+
+
+button:hover {
+  opacity: 1;
+}
+
+
+.todo-form {
+  padding-bottom: 1.5rem;
 }
