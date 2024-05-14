@@ -109,3 +109,57 @@
     text-transform: capitalize;
 }
 
+
+@media (max-width: 620px) {
+
+  .container .title {
+    font-size: 44px;
+  }
+
+
+  .main h2 {
+    font-size: 22px;
+  }
+
+
+  .main span {
+    font-size: 14px;
+  }
+
+
+  .main {
+    width: 80%;
+    min-height: 250px;
+  }
+
+
+}
+
+
+
+
+@media (max-width: 400px) {
+
+  .container .title {
+    font-size: 30px;
+  }
+
+
+  .main h2 {
+    font-size: 18px;
+  }
+
+
+  .main span {
+    font-size: 13.5px;
+  }
+
+
+  .main {
+    width: 80%;
+    min-height: 200px;
+  }
+
+
+}
+
