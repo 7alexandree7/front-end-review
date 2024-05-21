@@ -3,32 +3,29 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import Child1 from './Components/Child1'
+import Child2 from './Components/Child2'
+
+
+
 function App() {
+
   const [count, setCount] = useState(0)
+  const [secondCount, setSecondCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='App'>
+
+      <h1>Hello word!</h1>
+
+      <Child1 value={count}/>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+
+
+      <Child2 value={secondCount}/>
+      <button onClick={() => setSecondCount((secondCount + 1))}>Increment</button>
+      
+    </div>
   )
 }
 
