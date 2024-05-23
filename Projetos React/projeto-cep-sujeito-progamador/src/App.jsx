@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FiSearch } from 'react-icons/fi'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -11,25 +11,31 @@ function App() {
   const [cep, setCep] = useState({});
 
 
-  async function handleSearch() {
+  useEffect(() => {
 
-    if (input === '') {
-      alert('voce não digitou nada');
-      return;
-    }
+    const handleSearch = async () => {
 
-    try {
-      const response = await api.get(`${input}/json`);
-      setCep(response.data);
-      setInput("");
+      if (input === '') {
+        alert('Você não digitou nada');
+        return;
+      }
 
-    } catch {
-      alert("CEP não encontrado");
-      setInput("");
+      try {
+        const response = await api.get(`${input}/json`);
+        setCep(response.data);
+        setInput("");
+      } 
 
-    }
+      catch {
+        alert("CEP não encontrado");
+        setInput("");
+      }
+      
+    };
 
-  }
+    handleSearch();
+  }, [input]); // O efeito será executado sempre que 'input' mudar
+
 
   return (
 
