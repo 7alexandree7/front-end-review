@@ -1,0 +1,40 @@
+.search {
+    background-color: #2b3566;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.paragrafos_search {
+    color:#9da5d1 ;
+}
+
+
+.search_container_input {
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+.search_container_input .input_search,
+.search_container_input .button_search {
+    outline: none;
+    border: none;
+    color:#2b3566 ;
+    padding: 0.6rem;
+    border-radius: 5px;
+}
+
+
+
+.search_container_input .button_search {
+    background-color: #0e1129;
+    cursor: pointer;
+}

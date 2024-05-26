@@ -4,19 +4,55 @@ import { useState } from "react";
 
 const Home = () => {
 
-    const [user, setUser] = useState<UserProps | null>(null)
-    
-    const loadUser = async(userName: string) => {
-        
-        const res = await fetch(`https://api.github.com/users/${userName}`);
-        const data = await res.json();
-        console.log(data);
-    }
-    
+    const [user, setUser] = useState<UserProps | null>(null);
+
+    const loadUser = async (userName: string) => {
+
+        try {
+            const res = await fetch(`https://api.github.com/users/${userName}`);
+
+            if (!res.ok) {
+                // Verifica se a resposta não está OK e lança um erro
+                throw new Error('Usuário não encontrado');
+            }
+
+
+            const data = await res.json();
+            console.log(data);
+            console.log(user?.login);
+
+            const { avatar_url, login, location, followers, following } = data;
+
+            const userData: UserProps = {
+                avatar_url,
+                login,
+                location,
+                followers,
+                following
+            };
+
+            setUser(userData);
+        }
+
+        catch (error) {
+
+            if (error instanceof Error) {
+                alert("Erro ao pesquisar o usuário: " + error.message);
+                
+
+            } else {
+                alert("Erro ao pesquisar o usuário: " + String(error));
+            }
+        }
+
+    };
+
+
+
     return (
 
         <div>
-            <Search loadUser={loadUser}/>
+            <Search loadUser={loadUser} />
         </div>
     )
 }

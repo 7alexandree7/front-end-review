@@ -1,24 +1,48 @@
-type SearchProps =  {
-    loadUser: (userName: string) => Promise<void>
+import { useState } from "react";
+import { BsSearch } from "react-icons/bs";
+import { KeyboardEvent } from "react";
+
+import classes from "./Search.module.css";
+
+type SearchProps = {
+    loadUser: (userName: string) => Promise<void>;
 }
 
 
-import { BsSearch } from "react-icons/bs"
+const Search = ({ loadUser }: SearchProps) => {
 
-const Search = ({loadUser}: SearchProps) => {
+    const [userName, setUserName] = useState("");
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+
+        if (e.key === "Enter") {
+            loadUser(userName);
+        }
+
+    }
 
     return (
-        <div>
+        <div className={classes.search}>
             <h2>Busque por um Usuário:</h2>
-            <p>Conheça seus melhores repositórios</p>
+            <p className={classes.paragrafos_search}>Conheça seus melhores repositórios</p>
 
-            <div>
-                <input type="text" placeholder="Digite o nome do usuário"/>
-                <button> <BsSearch /></button>
+            <div className={classes.search_container_input}>
+
+                <input className={classes.input_search}
+                    type="text"
+                    placeholder="Digite o nome do usuário"
+                    value={userName}
+                    onChange={(e) => setUserName(e.target.value)} 
+                    onKeyDown={handleKeyDown}
+                    />
+                    
+
+                <button className={classes.button_search} onClick={() => loadUser(userName)}> <BsSearch /></button>
+
             </div>
         </div>
     )
 }
 
 
-export default Search
+export default Search;
