@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
 
-import classes from "./App.module.css"
+import classes from "./style/App.module.css"
 
 
 function App() {
@@ -15,4 +15,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
