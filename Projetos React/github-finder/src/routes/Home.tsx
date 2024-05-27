@@ -1,6 +1,8 @@
 import { UserProps } from "../types/user";
 import Search from "../components/Search";
 import { useState } from "react";
+import Name from "../components/Name";
+
 
 const Home = () => {
 
@@ -32,6 +34,7 @@ const Home = () => {
             };
 
             setUser(userData);
+            
         }
 
         catch (error) {
@@ -53,6 +56,7 @@ const Home = () => {
 
         <div>
             <Search loadUser={loadUser} />
+            {user && <Name {...user}/>}
         </div>
     )
 }

@@ -34,7 +34,9 @@ const Search = ({ loadUser }: SearchProps) => {
                     value={userName}
                     onChange={(e) => setUserName(e.target.value)} 
                     onKeyDown={handleKeyDown}
+                    
                     />
+                    
                     
 
                 <button className={classes.button_search} onClick={() => loadUser(userName)}> <BsSearch /></button>
