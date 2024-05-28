@@ -3,19 +3,25 @@ import { MdLocationPin } from "react-icons/md";
 import classes from "./Name.module.css"
 
 
-const Name = ({ login, avatar_url, followers, following, location }: UserProps) => {
+const Name = ({ login, avatar_url, bio, followers, following, location }: UserProps) => {
 
     return (
 
         <div className={classes.name}>
-            <img className={classes.img_name}  src={avatar_url} alt={login} />
+            <img className={classes.img_name} src={avatar_url} alt={login} />
             <h2>{login}</h2>
 
             {location && (
                 <p className={classes.location}>
-                    <MdLocationPin/>
+                    <MdLocationPin />
                     <span>{location}</span>
                 </p>
+            )}
+
+
+            {bio && (
+                <p className={classes.bio}>{bio}</p>
+                
             )}
 
             <div className={classes.status}>
@@ -30,7 +36,7 @@ const Name = ({ login, avatar_url, followers, following, location }: UserProps) 
                 </div>
             </div>
 
-            
+
         </div>
     )
 }
