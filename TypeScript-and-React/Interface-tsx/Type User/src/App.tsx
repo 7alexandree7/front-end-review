@@ -1,4 +1,6 @@
 import User from './Types/User'
+import { Aluno } from './Types/Extends'
+import { Pessoa } from './Types/Extends'
 
 import './App.css'
 
@@ -12,6 +14,17 @@ function App() {
     nacionalidade: 'BR',
     hetero: true,
   }
+
+
+  const MyPersonaObj: Pessoa | Aluno = {
+    nome: 'adriana',
+    idade: 45,
+    curso: 'dev',
+    materiaFavorita: 'matematica'
+  }
+
+
+  console.log(MyPersonaObj)
 
   console.log(userObjt)
   
