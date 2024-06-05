@@ -4,31 +4,29 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
+
   const [count, setCount] = useState(0)
+  const [people, setPeople] = useState([
+    {id: 1, name: 'alexandre', sobreNome: 'oliveira' },
+    {id: 2, name: 'Adriana', sobreNome: 'Santos'}
+  ])
+
+  const newPeople = {id: 3, name: 'Guilherme', sobreNome: 'pereira'}
+  const peopleLenght = people.length
+
+  console.log(people)
+  console.log(peopleLenght)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+
+    <div>
+      <h2>State</h2>
+      <div>   
+        <button onClick={() => setPeople((prevPeople) => [...prevPeople, newPeople])}>Contador de Objetos no Array</button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+      {<p>Quantidade {peopleLenght}</p>}
+    </div>
   )
 }
 
