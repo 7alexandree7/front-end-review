@@ -1,4 +1,4 @@
-import { Box, Grid, Container,} from '@mui/material'
+import { Box, Grid, Container, } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import NavBar from '../Components/NavBar/Index'
 import PokemonCard from '../Components/PokemonCard/Index'
@@ -20,19 +20,34 @@ export const Home = () => {
         for (let i = 1; i <= 100; i++) {
             endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
         }
-
-        
-
         let response = axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res))
-        console.log(response)
-
-
-
     }
+
+
+
+    const pokemonFilter = (name) => {
+
+        if(name === '') {
+            getPokemons();
+        }
+
+        let filteredPokemons = [];
+
+        for (let i in pokemons) {
+            if (pokemons[i].data.name.includes(name)) {
+                filteredPokemons.push(pokemons[i])
+                
+            }
+        }
+
+        console.log(filteredPokemons)
+        setPokemons(filteredPokemons)
+    }
+
 
     return (
         <div>
-            <NavBar />
+            <NavBar pokemonFilter={pokemonFilter} />
             <Container maxWidth='false'>
                 <Grid container spacing={4}>
 
