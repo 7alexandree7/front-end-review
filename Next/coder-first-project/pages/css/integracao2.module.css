@@ -1,0 +1,22 @@
+#integracao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.vermelha {
+    color: red;
+}
+
+.azul {
+    color: blue
+}
+
+
+.branco {
+    background-color: coral;
+    color: aliceblue;
+}
