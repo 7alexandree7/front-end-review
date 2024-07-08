@@ -1,7 +1,23 @@
-const Titulo = () => {
+interface texto {
+    principal: string
+    secundario: string
+    pequeno?: boolean
+}
 
-    return (
-        <h1>Titulo teste</h1>
+
+const Titulo: React.FC<texto> = ({ principal, secundario, pequeno }) => {
+
+
+    return pequeno ? (
+        <>
+            <h1>{principal}</h1>
+            <h2>{secundario}</h2>
+        </>
+    ) : (
+        <>
+            <p style={{color: "red"}}>{principal}</p>
+            <p style={{color: "red"}}>{secundario}</p>
+        </>
     )
 }
 
