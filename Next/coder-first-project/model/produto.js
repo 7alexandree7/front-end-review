@@ -13,14 +13,14 @@ export default class Produto {
     }
 
     get id () {
-        return id
+        return this.#id
     }
 
     get nome () {
-        return nome
+        return this.#nome
     }
 
     get preco () {
-        return preco
+        return this.#preco
     }
 }
