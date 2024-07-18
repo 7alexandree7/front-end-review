@@ -23,7 +23,7 @@ form.addEventListener("submit", function (event)  {
         resultMessage.style.color = "red";
     }
 
-    validateEmail(email)
+
 })
 
 
